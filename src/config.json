@@ -1,0 +1,33 @@
+{
+  "output": "../",
+  "locals": {
+    "url": "http://0.0.0.0:9999",
+    "name": "tarruda's blog",
+    "description": "Writings of a terminal geek"
+  },
+  "port": 9999,
+  "hostname": "0.0.0.0",
+  "plugins": [
+    "./plugins/paginator.coffee"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  },
+  "ignore": [
+    "*~",
+    "*.swp",
+    "*.swo"
+  ]
+}
