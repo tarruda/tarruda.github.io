@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tarruda's blog</title>
-    <atom:link href="http://0.0.0.0:9999/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link>http://0.0.0.0:9999</link>
+    <atom:link href="http://tarruda.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://tarruda.github.io</link>
     <description>Thoughts and ideas of a computer geek</description>
     <pubDate>Wed, 08 Jan 2014 21:00:00 -0300</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
       <title>Giving back</title>
-      <link>http://0.0.0.0:9999/articles/giving-back/</link>
+      <link>http://tarruda.github.io/articles/giving-back/</link>
       <pubDate>Wed, 08 Jan 2014 21:00:00 -0300</pubDate>
-      <guid isPermaLink="true">http://0.0.0.0:9999/articles/giving-back/</guid>
+      <guid isPermaLink="true">http://tarruda.github.io/articles/giving-back/</guid>
       <author></author>
       <description>&lt;p&gt;For more than 10 years I‘ve been improving my IT skills - most of which are
 related to computer programming - and it’s safe to say that at least 90% of my
