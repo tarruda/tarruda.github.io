@@ -1,7 +1,7 @@
 {
   "output": "../",
   "locals": {
-    "url": "http://0.0.0.0:9999",
+    "url": "http://tarruda.github.io",
     "name": "tarruda's blog",
     "description": "Thoughts and ideas of a computer geek"
   },
