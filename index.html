@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>tarruda's blog
+    </title>
+    <link rel="alternate" href="http://0.0.0.0:9999/feed.xml" type="application/rss+xml" title="Writings of a terminal geek">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="content-wrap">
+        <div class="logo">
+          <h1><a href="http://0.0.0.0:9999">tarruda's blog</a></h1>
+          <p class="description">Writings of a terminal geek</p>
+        </div>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article intro">
+          <header>
+            <p class="date"><span>09. January 2014</span></p>
+            <h2><a href="/articles/giving-back/">Giving back</a></h2>
+          </header>
+          <section class="content"><p>For more than 10 years I‘ve been improving my <span class="caps">IT</span> skills - most of which are
+related to computer programming - and it’s safe to say that at least 90% of my
+knowledge came from internet&nbsp;sources.</p>
+<p>As a natural consequence of learning, I&#39;ve developed a few ideas of my own,
+ideas that may be interesting or useful to others, but I lacked a simple way to
+share these ideas. This is one of the reasons that motivated me to start this
+blog. Another reason is to receive feedback from others who share my interests,
+which will help me evolve in my art and perhaps let create more cool&nbsp;things.</p>
+<p><a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> enabled me to get
+started very quickly, these were the basic&nbsp;steps:</p>
+<pre><code class="lang-sh">$ npm install -g wintersmith
+$ wintersmith new ~/my-blog
+$ cd ~/my-blog
+$ mkdir src
+$ mv config.json contents node_modules package.json plugins readme.md templates src
+$ (cd src &amp;&amp; wintersmith preview) # preview the blog
+$ (cd src &amp;&amp; wintersmith build)   # generate the blog
+$ git init
+$ git remote add origin git@github.com:tarruda/tarruda.github.io
+$ git add .
+$ git commit
+$ git push --set-upstream origin master</code></pre>
+<p>Thats it for now. If you are a computer geek, be sure to subscribe or check
+back every once in a while to read some interesting technical&nbsp;articles.</p>
+
+          </section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/archive.html">« Archives</a>
+        </div>
+        <section class="about"><p>My name is Thiago de Arruda and I&#39;m a freelance programmer living in
+<a href="http://en.wikipedia.org/wiki/Recife">Recife/Brasil</a>. I also do a lot of open
+source as can be seen in my <a href="https://github.com/tarruda">github profile</a>.</p>
+<p>If you have questions, suggestions or feedbacks regarding one of my projects or
+posts, I&#39;d be happy to read about it. Just contact me through email, github or
+IRC/freenode(nick tarruda).</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014  &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
