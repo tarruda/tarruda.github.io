@@ -3,7 +3,7 @@
   "locals": {
     "url": "http://0.0.0.0:9999",
     "name": "tarruda's blog",
-    "description": "Writings of a terminal geek"
+    "description": "Thoughts and ideas of a computer geek"
   },
   "port": 9999,
   "hostname": "0.0.0.0",
