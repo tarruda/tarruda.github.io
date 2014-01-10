@@ -1,3 +1,6 @@
 
-# [My Blog](http://tarruda.github.io)
+# My Blog
+
+[url](http://tarruda.github.io)
+[feed](http://tarruda.github.io/feed.xml)
 
