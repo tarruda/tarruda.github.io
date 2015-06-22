@@ -26,6 +26,7 @@
     "perPage": 3
   },
   "ignore": [
+    "*~",
     "*.un~",
     "*.swp",
     "*.swo"
