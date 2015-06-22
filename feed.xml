@@ -5,44 +5,119 @@
     <atom:link href="http://tarruda.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://tarruda.github.io</link>
     <description>Thoughts and ideas of a computer geek</description>
-    <pubDate>Wed, 08 Jan 2014 21:00:00 -0300</pubDate>
+    <pubDate>Sun, 21 Jun 2015 21:00:00 -0300</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
-      <title>Giving back</title>
-      <link>http://tarruda.github.io/articles/giving-back/</link>
-      <pubDate>Wed, 08 Jan 2014 21:00:00 -0300</pubDate>
-      <guid isPermaLink="true">http://tarruda.github.io/articles/giving-back/</guid>
+      <title>Neovim smart UI protocol</title>
+      <link>http://tarruda.github.io/articles/neovim-smart-ui-protocol/</link>
+      <pubDate>Sun, 21 Jun 2015 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://tarruda.github.io/articles/neovim-smart-ui-protocol/</guid>
       <author></author>
-      <description>&lt;p&gt;For more than 10 years I‘ve been improving my IT skills - most of which are
-related to computer programming - and it’s safe to say that at least 90% of my
-knowledge came from internet sources. &lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
-&lt;p&gt;As a natural consequence of learning, I&amp;#39;ve developed a few ideas of my own,
-ideas that may be interesting or useful to others, but lacked a simple way to
-share these ideas, which was the main motivation for me to start this blog.&lt;/p&gt;
-&lt;p&gt;Another reason is to receive feedback from readers who share my interests, which
-will help me to hone my skills and perhaps open my mind create more cool things.
-Finally, it will improve by english writing, which is kinda poor right now.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; enabled me to get
-started very quickly, these were the basic steps:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-sh&quot;&gt;# install wintersmith and scaffold the blog
-$ npm install -g wintersmith
-$ wintersmith new ~/my-blog
-$ cd ~/my-blog
-# move everything to a subdirectory and set the &amp;quot;output&amp;quot; option of config.json
-# to &amp;#39;../&amp;#39;(the generated pages need to be in the repository root for github)
-$ mkdir src
-$ mv config.json contents node_modules package.json plugins readme.md templates src
-$ (cd src &amp;amp;&amp;amp; wintersmith preview) # preview the blog
-$ (cd src &amp;amp;&amp;amp; wintersmith build)   # generate the blog
-$ git init
-$ git remote add origin git@github.com:tarruda/tarruda.github.io
-$ git add .
-$ git commit
-$ git push --set-upstream origin master&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Thats it for now. If you are a computer geek who enjoys reading techinal
-articles, subscribe or check back every once in a while and I will be sure
-to post interesting things.&lt;/p&gt;
+      <description>&lt;p&gt;My first blog post will be about a Neovim feature I’ve been working on
+for the last weeks. It doesn’t have an official name yet but I’m calling it
+“Smart UI protocol” for now. &lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Those following Neovim development probably know that one of the project’s goals
+is to transform Vim into an embeddable text editor engine. It’s msgpack-rpc
+interface and UI protocol already make this possible to a certain extent, as
+shown by projects like &lt;a href=&quot;https://github.com/oakes/SolidOak&quot;&gt;SolidOak&lt;/a&gt; or &lt;a href=&quot;https://github.com/coolwanglu/neovim-e&quot;&gt;neovim-e&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;The problem with the current UI protocol is that it can only be used to mirror
+Neovim main screen on top of other widget toolkits, so embedders are very
+limited in what they can do regarding UI customization. To understand the
+problem better, let’s see a diagram with a high-level illustration of how the UI
+protocol currently works:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+---------------+         call `ui_attach` via msgpack-rpc    +---------------+
+|               |             to receive UI updates           |               |
+|               | &amp;lt;------------------------------------------ |               |
+|               |                                             |               |
+|               |            instructions on how to           |               |
+|               |            draw the whole screen            |               |
+|               | ------------------------------------------&amp;gt; |               |
+|               |                                             |               |
+|               |               send input(:vsp)              |               |
+|               | &amp;lt;------------------------------------------ |               |
+|    Neovim     |                                             |    Embedder   |
+|               |   instructions on how to echo command-line  |               |
+|               |      and each character as it is typed.     |               |
+|               | ------------------------------------------&amp;gt; |               |
+|               |                                             |               |
+|               |               send input(&amp;lt;cr&amp;gt;)              |               |
+|               | &amp;lt;------------------------------------------ |               |
+|               |                                             |               |
+|               |    instructions on how to draw a vertical   |               |
+|               |       separator and redraw the buffer       |               |
+|               |          in each side of the split          |               |
+|               | ------------------------------------------&amp;gt; |               |
++---------------+                                             +---------------+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That is, the embedder can’t do much more than follow Neovim instructions on how
+to draw both the displayed text and the user interface. This effectively limits
+GUIs to being nothing but glorified terminal emulators: They can put file
+explorers and menus near the editor shell, but can’t display windows with
+different font sizes for example.&lt;/p&gt;
+&lt;p&gt;This is greatly in part because Neovim redrawing code assumes a single
+monospaced font grid to represent every part of the UI, which makes perfect
+sense for terminal-only programs but is very limiting in other scenarios.
+Fixing this would require significant changes to the &lt;a href=&quot;https://github.com/neovim/neovim/blob/master/src/nvim/screen.c&quot;&gt;redrawing module&lt;/a&gt;,
+something that can potentially introduces many bugs and further delay a stable
+release.&lt;/p&gt;
+&lt;p&gt;With that said, I’ve been working on what I believe to be a relatively simple
+solution to the problem(won’t require drastic changes to &lt;a href=&quot;https://github.com/neovim/neovim/blob/master/src/nvim/screen.c&quot;&gt;screen.c&lt;/a&gt;):
+Implement a new UI protocol that allows embedders to have full control over
+window layout. This new protocol is activated via a command-line switch and
+replaces the old protocol when active(not possible to have both protocols active
+in the same Neovim instance). Here’s an overview of how Neovim behaves when this
+command-line flag is passed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;--embed&lt;/code&gt; flag is assumed(The builtin terminal UI is disabled and
+stdin/stdout become msgpack-rpc channels)&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;smart_ui_attach&lt;/code&gt; method creates and/or attaches to a window. It returns a
+window id, which will be sent on update notifications for that specific
+window.&lt;/li&gt;
+&lt;li&gt;A new &lt;code&gt;smart_ui_focus&lt;/code&gt; method is used by embedders to tell Neovim about which
+window is currently focused.&lt;/li&gt;
+&lt;li&gt;Each window has its own instance of the
+&lt;a href=&quot;https://github.com/neovim/neovim/blob/master/src/nvim/globals.h#L94-L97&quot;&gt;screen data structures&lt;/a&gt;, and window redrawing
+code(&lt;a href=&quot;https://github.com/neovim/neovim/blob/master/src/nvim/screen.c#L623&quot;&gt;win-update&lt;/a&gt;, &lt;a href=&quot;https://github.com/neovim/neovim/blob/master/src/nvim/screen.c#L2054&quot;&gt;win-line&lt;/a&gt;…) only affect the
+screen structures local to the window being redrawn.&lt;/li&gt;
+&lt;li&gt;Layout-affecting commands(&lt;code&gt;:split&lt;/code&gt;, &lt;code&gt;:vsplit&lt;/code&gt;, &lt;code&gt;:tabnew&lt;/code&gt;) are simply forwarded
+to the embedder, which must take appropriate actions to create and attach to
+new windows and display them where appropriate.&lt;/li&gt;
+&lt;li&gt;Command-line mode won’t trigger screen redraw instructions. Instead,
+msgpack-rpc objects with high-level information about what is happening on the
+command line will be sent. For example:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;{&amp;quot;command-line&amp;quot;: [&amp;quot;display-input-box&amp;quot;]}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{&amp;quot;command-line&amp;quot;: [&amp;quot;update-contents&amp;quot;, &amp;quot;sp&amp;quot;]}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{&amp;quot;command-line&amp;quot;: [&amp;quot;display-completions&amp;quot;, &amp;quot;split&amp;quot;, &amp;quot;spelldump&amp;quot;, &amp;quot;spellgood&amp;quot;...]}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Same for insert-mode completion, instead of redraw instructions, just sent
+completion candidates and row/column/window to display the box:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;{&amp;quot;insert-completion&amp;quot;: [&amp;quot;display&amp;quot;, 1, 40, 30, &amp;quot;method1&amp;quot;, &amp;quot;method2&amp;quot;]}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{&amp;quot;insert-completion&amp;quot;: [&amp;quot;hide&amp;quot;]}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In a few words: The smart UI protocol will separate the drawing of window
+contents and other user interface elements such as completion boxes and window
+frames. The advantages of this scheme may not be obvious, so let me list a few
+here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Embedders have complete freedom of how windows are displayed(custom decorators,
+floating windows…)&lt;/li&gt;
+&lt;li&gt;Frameless, single-line windows can be created, good for using Neovim as shell
+line editor for example.&lt;/li&gt;
+&lt;li&gt;Windows can have different fonts/sizes.&lt;/li&gt;
+&lt;li&gt;Custom widgets for displaying the command-line and insert-mode
+completion.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Clearly embedders will have more work to implement the smart UI protocol,
+that’s why it will be added as a new feature instead of replacing the current
+version. For simple embedding scenarios and for the builtin terminal UI the
+current protocol makes things much simpler.&lt;/p&gt;
+&lt;p&gt;To show the capabilities of the new UI protocol, I’m also working on a
+typescript web UI that will run in any modern web browser and communicates with
+Neovim via &lt;a href=&quot;https://github.com/kanaka/websockify&quot;&gt;websockify&lt;/a&gt;. If you like Neovim, stay tuned because it
+is about to get a facelift!&lt;/p&gt;
 </description>
     </item>
   </channel>

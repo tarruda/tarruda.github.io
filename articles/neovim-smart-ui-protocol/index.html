@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Neovim smart UI protocol - tarruda's blog
+    </title>
+    <link rel="alternate" href="http://tarruda.github.io/feed.xml" type="application/rss+xml" title="Thoughts and ideas of a computer geek">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Neovim smart UI protocol</h1>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>My first blog post will be about a Neovim feature I’ve been working on
+for the last weeks. It doesn’t have an official name yet but I’m calling it
+“Smart <span class="caps">UI</span> protocol” for now. <span class="more"></p>
+<p>Those following Neovim development probably know that one of the project’s goals
+is to transform Vim into an embeddable text editor engine. It’s msgpack-rpc
+interface and <span class="caps">UI</span> protocol already make this possible to a certain extent, as
+shown by projects like <a href="https://github.com/oakes/SolidOak">SolidOak</a> or <a href="https://github.com/coolwanglu/neovim-e">neovim-e</a>. </p>
+<p>The problem with the current <span class="caps">UI</span> protocol is that it can only be used to mirror
+Neovim main screen on top of other widget toolkits, so embedders are very
+limited in what they can do regarding UI customization. To understand the
+problem better, let’s see a diagram with a high-level illustration of how the UI
+protocol currently&nbsp;works:</p>
+<pre><code>+---------------+         call `ui_attach` via msgpack-rpc    +---------------+
+|               |             to receive UI updates           |               |
+|               | &lt;------------------------------------------ |               |
+|               |                                             |               |
+|               |            instructions on how to           |               |
+|               |            draw the whole screen            |               |
+|               | ------------------------------------------&gt; |               |
+|               |                                             |               |
+|               |               send input(:vsp)              |               |
+|               | &lt;------------------------------------------ |               |
+|    Neovim     |                                             |    Embedder   |
+|               |   instructions on how to echo command-line  |               |
+|               |      and each character as it is typed.     |               |
+|               | ------------------------------------------&gt; |               |
+|               |                                             |               |
+|               |               send input(&lt;cr&gt;)              |               |
+|               | &lt;------------------------------------------ |               |
+|               |                                             |               |
+|               |    instructions on how to draw a vertical   |               |
+|               |       separator and redraw the buffer       |               |
+|               |          in each side of the split          |               |
+|               | ------------------------------------------&gt; |               |
++---------------+                                             +---------------+
+</code></pre><p>That is, the embedder can’t do much more than follow Neovim instructions on how
+to draw both the displayed text and the user interface. This effectively limits
+GUIs to being nothing but glorified terminal emulators: They can put file
+explorers and menus near the editor shell, but can’t display windows with
+different font sizes for&nbsp;example.</p>
+<p>This is greatly in part because Neovim redrawing code assumes a single
+monospaced font grid to represent every part of the <span class="caps">UI</span>, which makes perfect
+sense for terminal-only programs but is very limiting in other scenarios.
+Fixing this would require significant changes to the <a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c">redrawing module</a>,
+something that can potentially introduces many bugs and further delay a stable&nbsp;release.</p>
+<p>With that said, I’ve been working on what I believe to be a relatively simple
+solution to the problem(won’t require drastic changes to <a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c">screen.c</a>):
+Implement a new <span class="caps">UI</span> protocol that allows embedders to have full control over
+window layout. This new protocol is activated via a command-line switch and
+replaces the old protocol when active(not possible to have both protocols active
+in the same Neovim instance). Here’s an overview of how Neovim behaves when this
+command-line flag is&nbsp;passed:</p>
+<ul>
+<li>The <code>--embed</code> flag is assumed(The builtin terminal <span class="caps">UI</span> is disabled and
+stdin/stdout become msgpack-rpc&nbsp;channels)</li>
+<li>The <code>smart_ui_attach</code> method creates and/or attaches to a window. It returns a
+window id, which will be sent on update notifications for that specific&nbsp;window.</li>
+<li>A new <code>smart_ui_focus</code> method is used by embedders to tell Neovim about which
+window is currently&nbsp;focused.</li>
+<li>Each window has its own instance of the
+<a href="https://github.com/neovim/neovim/blob/master/src/nvim/globals.h#L94-L97">screen data structures</a>, and window redrawing
+code(<a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c#L623">win-update</a>, <a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c#L2054">win-line</a>…) only affect the
+screen structures local to the window being&nbsp;redrawn.</li>
+<li>Layout-affecting commands(<code>:split</code>, <code>:vsplit</code>, <code>:tabnew</code>) are simply forwarded
+to the embedder, which must take appropriate actions to create and attach to
+new windows and display them where&nbsp;appropriate.</li>
+<li>Command-line mode won’t trigger screen redraw instructions. Instead,
+msgpack-rpc objects with high-level information about what is happening on the
+command line will be sent. For example:<ul>
+<li><code>{&quot;command-line&quot;: [&quot;display-input-box&quot;]}</code></li>
+<li><code>{&quot;command-line&quot;: [&quot;update-contents&quot;, &quot;sp&quot;]}</code></li>
+<li><code>{&quot;command-line&quot;: [&quot;display-completions&quot;, &quot;split&quot;, &quot;spelldump&quot;, &quot;spellgood&quot;...]}</code></li>
+</ul>
+</li>
+<li>Same for insert-mode completion, instead of redraw instructions, just sent
+completion candidates and row/column/window to display the box:<ul>
+<li><code>{&quot;insert-completion&quot;: [&quot;display&quot;, 1, 40, 30, &quot;method1&quot;, &quot;method2&quot;]}</code></li>
+<li><code>{&quot;insert-completion&quot;: [&quot;hide&quot;]}</code></li>
+</ul>
+</li>
+</ul>
+<p>In a few words: The smart <span class="caps">UI</span> protocol will separate the drawing of window
+contents and other user interface elements such as completion boxes and window
+frames. The advantages of this scheme may not be obvious, so let me list a few&nbsp;here:</p>
+<ul>
+<li>Embedders have complete freedom of how windows are displayed(custom decorators,
+floating&nbsp;windows…)</li>
+<li>Frameless, single-line windows can be created, good for using Neovim as shell
+line editor for&nbsp;example.</li>
+<li>Windows can have different&nbsp;fonts/sizes.</li>
+<li>Custom widgets for displaying the command-line and insert-mode&nbsp;completion.</li>
+</ul>
+<p>Clearly embedders will have more work to implement the smart <span class="caps">UI</span> protocol,
+that’s why it will be added as a new feature instead of replacing the current
+version. For simple embedding scenarios and for the builtin terminal UI the
+current protocol makes things much&nbsp;simpler.</p>
+<p>To show the capabilities of the new <span class="caps">UI</span> protocol, I’m also working on a
+typescript web UI that will run in any modern web browser and communicates with
+Neovim via <a href="https://github.com/kanaka/websockify">websockify</a>. If you like Neovim, stay tuned because it
+is about to get a&nbsp;facelift!</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <div id="disqus_thread"></div><script type="text/javascript">
+          var disqus_shortname = 'tarruda';
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p>My name is Thiago de Arruda and I’m a freelance programmer living in
+<a href="http://en.wikipedia.org/wiki/Recife">Recife/Brasil</a>. I also do a lot of open
+source as can be seen in my <a href="https://github.com/tarruda">github profile</a>.</p>
+<p>If you have questions, suggestions or feedbacks regarding one of my projects or
+posts, I’d be happy to read about it. Just contact me through
+<a href="mailto:tpadilha84@gmail.com">email</a>, <a href="https://github.com/tarruda">github</a> or
+IRC/freenode(nick tarruda).</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2015  &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

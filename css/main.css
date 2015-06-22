@@ -16,8 +16,13 @@ body {
   margin: 0 auto;
 }
 
-body, a {
+body {
   color: #d3d7cf;
+}
+
+a {
+  color: #427114;
+  text-decoration: none;
 }
 
 a:hover {
@@ -297,12 +302,15 @@ footer .copy, footer .copy a {
 code {
   font-family: 'Ubuntu Mono', 'Consolas', 'Monospace';
   font-size: 0.85em;
-  color: #000;
+  font-style: italic;
+  color: #b27b27;
 }
 
 pre code {
+  font-style: normal;
   display: block;
   line-height: 1.1;
+  color: #000;
 }
 
 p code {
