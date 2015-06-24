@@ -10,7 +10,7 @@ for the last weeks. It doesn't have an official name yet but I'm calling it
 "Smart UI protocol" for now. <span class="more">
 
 Those following Neovim development probably know that one of the project's goals
-is to transform Vim into an embeddable text editor engine. It's msgpack-rpc
+is to transform Vim into an embeddable text editor engine. Its msgpack-rpc
 interface and UI protocol already make this possible to a certain extent, as
 shown by projects like [SolidOak][SolidOak] or [neovim-e][neovim-e]. 
 
@@ -57,7 +57,7 @@ This is greatly in part because Neovim redrawing code assumes a single
 monospaced font grid to represent every part of the UI, which makes perfect
 sense for terminal-only programs but is very limiting in other scenarios.
 Fixing this would require significant changes to the [redrawing module][screen.c],
-something that can potentially introduces many bugs and further delay a stable
+something that can potentially introduce many bugs and further delay a stable
 release.
 
 With that said, I've been working on what I believe to be a relatively simple

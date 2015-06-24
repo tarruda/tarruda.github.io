@@ -23,7 +23,7 @@
 for the last weeks. It doesn’t have an official name yet but I’m calling it
 “Smart <span class="caps">UI</span> protocol” for now. <span class="more"></p>
 <p>Those following Neovim development probably know that one of the project’s goals
-is to transform Vim into an embeddable text editor engine. It’s msgpack-rpc
+is to transform Vim into an embeddable text editor engine. Its msgpack-rpc
 interface and <span class="caps">UI</span> protocol already make this possible to a certain extent, as
 shown by projects like <a href="https://github.com/oakes/SolidOak">SolidOak</a> or <a href="https://github.com/coolwanglu/neovim-e">neovim-e</a>. </p>
 <p>The problem with the current <span class="caps">UI</span> protocol is that it can only be used to mirror
@@ -63,7 +63,7 @@ different font sizes for&nbsp;example.</p>
 monospaced font grid to represent every part of the <span class="caps">UI</span>, which makes perfect
 sense for terminal-only programs but is very limiting in other scenarios.
 Fixing this would require significant changes to the <a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c">redrawing module</a>,
-something that can potentially introduces many bugs and further delay a stable&nbsp;release.</p>
+something that can potentially introduce many bugs and further delay a stable&nbsp;release.</p>
 <p>With that said, I’ve been working on what I believe to be a relatively simple
 solution to the problem(won’t require drastic changes to <a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c">screen.c</a>):
 Implement a new <span class="caps">UI</span> protocol that allows embedders to have full control over

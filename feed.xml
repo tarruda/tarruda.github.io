@@ -18,7 +18,7 @@
 for the last weeks. It doesn’t have an official name yet but I’m calling it
 “Smart UI protocol” for now. &lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Those following Neovim development probably know that one of the project’s goals
-is to transform Vim into an embeddable text editor engine. It’s msgpack-rpc
+is to transform Vim into an embeddable text editor engine. Its msgpack-rpc
 interface and UI protocol already make this possible to a certain extent, as
 shown by projects like &lt;a href=&quot;https://github.com/oakes/SolidOak&quot;&gt;SolidOak&lt;/a&gt; or &lt;a href=&quot;https://github.com/coolwanglu/neovim-e&quot;&gt;neovim-e&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;The problem with the current UI protocol is that it can only be used to mirror
@@ -58,7 +58,7 @@ different font sizes for example.&lt;/p&gt;
 monospaced font grid to represent every part of the UI, which makes perfect
 sense for terminal-only programs but is very limiting in other scenarios.
 Fixing this would require significant changes to the &lt;a href=&quot;https://github.com/neovim/neovim/blob/master/src/nvim/screen.c&quot;&gt;redrawing module&lt;/a&gt;,
-something that can potentially introduces many bugs and further delay a stable
+something that can potentially introduce many bugs and further delay a stable
 release.&lt;/p&gt;
 &lt;p&gt;With that said, I’ve been working on what I believe to be a relatively simple
 solution to the problem(won’t require drastic changes to &lt;a href=&quot;https://github.com/neovim/neovim/blob/master/src/nvim/screen.c&quot;&gt;screen.c&lt;/a&gt;):
