@@ -62,10 +62,10 @@ different font sizes for&nbsp;example.</p>
 <p>This is greatly in part because Neovim redrawing code assumes a single
 monospaced font grid to represent every part of the <span class="caps">UI</span>, which makes perfect
 sense for terminal-only programs but is very limiting in other scenarios.
-Fixing this would require significant changes to the <a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c">redrawing module</a>,
+Fixing this would require significant changes to the <a href="https://github.com/neovim/neovim/blob/074d3dc1f365f79e91785d02b2a9756af7a94e23/src/nvim/screen.c">redrawing module</a>,
 something that can potentially introduce many bugs and further delay a stable&nbsp;release.</p>
 <p>With that said, I’ve been working on what I believe to be a relatively simple
-solution to the problem(won’t require drastic changes to <a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c">screen.c</a>):
+solution to the problem(won’t require drastic changes to <a href="https://github.com/neovim/neovim/blob/074d3dc1f365f79e91785d02b2a9756af7a94e23/src/nvim/screen.c">screen.c</a>):
 Implement a new <span class="caps">UI</span> protocol that allows embedders to have full control over
 window layout. This new protocol is activated via a command-line switch and
 replaces the old protocol when active(not possible to have both protocols active
@@ -79,8 +79,8 @@ window id, which will be sent on update notifications for that specific&nbsp;win
 <li>A new <code>smart_ui_focus</code> method is used by embedders to tell Neovim about which
 window is currently&nbsp;focused.</li>
 <li>Each window has its own instance of the
-<a href="https://github.com/neovim/neovim/blob/master/src/nvim/globals.h#L94-L97">screen data structures</a>, and window redrawing
-code(<a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c#L623">win-update</a>, <a href="https://github.com/neovim/neovim/blob/master/src/nvim/screen.c#L2054">win-line</a>…) only affect the
+<a href="https://github.com/neovim/neovim/blob/074d3dc1f365f79e91785d02b2a9756af7a94e23/src/nvim/globals.h#L144-L147">screen data structures</a>, and window redrawing
+code(<a href="https://github.com/neovim/neovim/blob/074d3dc1f365f79e91785d02b2a9756af7a94e23/src/nvim/screen.c#L609">win-update</a>, <a href="https://github.com/neovim/neovim/blob/074d3dc1f365f79e91785d02b2a9756af7a94e23/src/nvim/screen.c#L2062">win-line</a>…) only affect the
 screen structures local to the window being&nbsp;redrawn.</li>
 <li>Layout-affecting commands(<code>:split</code>, <code>:vsplit</code>, <code>:tabnew</code>) are simply forwarded
 to the embedder, which must take appropriate actions to create and attach to
@@ -146,7 +146,7 @@ IRC/freenode(nick tarruda).</p>
 
         </section>
         <section class="copy">
-          <p>&copy; 2015  &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          <p>&copy; 2016  &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
           </p>
         </section>
       </div>
