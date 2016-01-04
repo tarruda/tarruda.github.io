@@ -119,8 +119,8 @@ is about to get a facelift!
 
 [SolidOak]: https://github.com/oakes/SolidOak
 [neovim-e]: https://github.com/coolwanglu/neovim-e
-[screen.c]: https://github.com/neovim/neovim/blob/master/src/nvim/screen.c
-[screen-data-structures]: https://github.com/neovim/neovim/blob/master/src/nvim/globals.h#L94-L97
-[win-update]: https://github.com/neovim/neovim/blob/master/src/nvim/screen.c#L623
-[win-line]: https://github.com/neovim/neovim/blob/master/src/nvim/screen.c#L2054
+[screen.c]: https://github.com/neovim/neovim/blob/074d3dc1f365f79e91785d02b2a9756af7a94e23/src/nvim/screen.c
+[screen-data-structures]: https://github.com/neovim/neovim/blob/074d3dc1f365f79e91785d02b2a9756af7a94e23/src/nvim/globals.h#L144-L147
+[win-update]: https://github.com/neovim/neovim/blob/074d3dc1f365f79e91785d02b2a9756af7a94e23/src/nvim/screen.c#L609
+[win-line]: https://github.com/neovim/neovim/blob/074d3dc1f365f79e91785d02b2a9756af7a94e23/src/nvim/screen.c#L2062
 [websockify]: https://github.com/kanaka/websockify
