@@ -1,0 +1,5 @@
+Component: main
+Origin: debmaster
+Label: debmaster
+Architecture: arm64
+Description: Debmaster-generated repository

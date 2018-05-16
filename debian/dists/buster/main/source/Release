@@ -1,0 +1,5 @@
+Component: main
+Origin: debmaster
+Label: debmaster
+Architecture: source
+Description: Debmaster-generated repository
