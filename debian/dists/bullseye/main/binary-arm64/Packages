@@ -1,0 +1,711 @@
+Package: debmaster
+Version: 2.0.2-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 95
+Depends: python3-xdg, python3:any, python3-ush, pbuilder, reprepro
+Homepage: https://git.sr.ht/~tarruda/debmaster
+Priority: extra
+Section: utils
+Filename: pool/main/d/debmaster/debmaster_2.0.2-1_all.deb
+Size: 18996
+SHA256: e2e7b4ea4024e21df942afbf81e2ff6b845e2f10580b2c1b928784ab3033a9c4
+SHA1: 86bb248fee416b575945fcac8e425baf538c6821
+MD5sum: 848146c220945d0159e1792ad4dcde60
+Description: Tool to simplify maintenance of personal debian packages
+
+Package: gnome-gocryptfs
+Version: 1-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 78
+Depends: python3-xdg, gocryptfs, gir1.2-secret-1
+Homepage: https://github.com/cjermain/gnome-gocryptfs
+Priority: extra
+Section: utils
+Filename: pool/main/g/gnome-gocryptfs/gnome-gocryptfs_1-1_all.deb
+Size: 19480
+SHA256: a9948118bba8d25f3bc126d9cf7d2a3f5227be1ae9562f0cb39a5767f07450d0
+SHA1: 2e1d9f3e1c9fa0317a3739a57ad888dc80a64382
+MD5sum: eef9788c82a01f1b565b7b4c8c5942e8
+Description: gocryptfs managed with the GNOME keyring.
+
+Package: i3hub
+Version: 3.1.3-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 71
+Depends: python3-xdg, python3:any
+Homepage: https://github.com/tarruda/i3hub.git
+Priority: extra
+Section: utils
+Filename: pool/main/i/i3hub/i3hub_3.1.3-1_all.deb
+Size: 13660
+SHA256: 35129ebd6e6398b5e39987ab9ed41445f1940b3f165265d7008b0911def869f7
+SHA1: 1c27d2af6e0f1ae59e55fb485858254f66ad19ab
+MD5sum: 8215ab1efb557900811638533c010804
+Description: i3 extension runtime
+
+Package: language-server-typescript
+Version: 0.5.1-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 2027
+Depends: nodejs
+Homepage: https://github.com/theia-ide/typescript-language-server
+Priority: extra
+Section: utils
+Filename: pool/main/l/language-server-typescript/language-server-typescript_0.5.1-1_all.deb
+Size: 256480
+SHA256: a921c35c8793f5ed0f4ea48a30a8905bd8fc9ca29341b2d94628a709ff903fe4
+SHA1: 84ba4f7d2908d1021b258666c646dfbe35d72dc7
+MD5sum: d02157ceaff880dc0e73d4206cf5c707
+Description: Language Server Protocol (LSP) implementation for TypeScript using
+ tsserver
+
+Package: nvim-commentary
+Version: 1574045153-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 28
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/tpope/vim-commentary.git
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-commentary/nvim-commentary_1574045153-1_all.deb
+Size: 4920
+SHA256: 96975666a4a99c6c5fecd83b81d30686f51f8dc1ec3226cf2f475005108ace7f
+SHA1: c9cf3963945576a0ff46bdc43c157e65b3cbfa8a
+MD5sum: 33a317ddcb30e47c961aefb936b09c41
+Description: commentary.vim: comment stuff out
+
+Package: nvim-deoplete
+Version: 1622989311-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 285
+Depends: neovim (>= 0.1.7), python3-msgpack
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/Shougo/deoplete.nvim
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-deoplete/nvim-deoplete_1622989311-1_all.deb
+Size: 50540
+SHA256: 5d526e2c83ca7bf3dffc1aa714ae726d3dc9f68839742c146a96ceaefcfc9377
+SHA1: 82a5929501f0ceabd963295aed33491cd58977b7
+MD5sum: d3f602e2c906515b6f9db2cadaa0bd0f
+Description: Dark powered asynchronous completion framework for neovim/Vim8
+
+Package: nvim-eunuch
+Version: 1579155142-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 37
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/tpope/vim-eunuch.git
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-eunuch/nvim-eunuch_1579155142-1_all.deb
+Size: 7288
+SHA256: 0cacc3f2c05595b5a855b29f6e04d4015371028734e0ffd6f27795262cf6797b
+SHA1: f37ec963ae4e0079759c928080051a9de9449c86
+MD5sum: 74cc02ab37f93ce01cb7d4a8e9e9ea02
+Description: eunuch.vim: Helpers for UNIX
+
+Package: nvim-fugitive
+Version: 3.3-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 317
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/tpope/vim-fugitive.git
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-fugitive/nvim-fugitive_3.3-1_all.deb
+Size: 62152
+SHA256: 4a563c0f6c17a1cb95e6323e3b5a49e102de2fa39c963be19d3e473b20428162
+SHA1: f228735dffef1b7f832fea2f8c896968aacfc955
+MD5sum: c765881ab11e29fa49b82b42b5504d18
+Description: fugitive.vim: A Git wrapper so awesome, it should be illegal
+
+Package: nvim-fzf
+Version: 0.27.2-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 243
+Depends: neovim (>= 0.1.7), fzf
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/junegunn/fzf
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-fzf/nvim-fzf_0.27.2-1_all.deb
+Size: 59568
+SHA256: 5ff24cdd29465784d88ca7d4fbb3ce1796ba7b8c3126b26e656ed8214f4c001a
+SHA1: 73bfe0fd0fe8c9e989f88953c0e7a6ed4bfd8230
+MD5sum: ef9d97f9087f5652504e616114735d40
+Description: A command-line fuzzy finder with bundled nvim plugin
+
+Package: nvim-glsl
+Version: 1587454521-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 58
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/tikhomirov/vim-glsl
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-glsl/nvim-glsl_1587454521-1_all.deb
+Size: 7584
+SHA256: a3c4f82ab50a8e30cde369c274e02b9344713336023c3048309e095157db14db
+SHA1: 38474035e1d06ff457053836a2c3376fac7ac35e
+MD5sum: c3f52f32c7557f43d571403cf5af6d95
+Description: Vim runtime files for OpenGL Shading Language
+
+Package: nvim-gnupg
+Version: 1566741088-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 71
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/jamessan/vim-gnupg
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-gnupg/nvim-gnupg_1566741088-1_all.deb
+Size: 14636
+SHA256: 5cd2665396fa0e9a5450871b25d2fd784545d5d4e4eb657de23860054dbddef6
+SHA1: 25e9a7dcd4e21c26697b7ab59faa50c8b63bbc60
+MD5sum: 305bbe41fd034590a3b84b9fffa1f184
+Description: transparent editing of gpg encrypted files.
+
+Package: nvim-grepper
+Version: 1575907887-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 1696
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/mhinz/vim-grepper
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-grepper/nvim-grepper_1575907887-1_all.deb
+Size: 1305148
+SHA256: e5b8de68b3e8fee34cbcf7c4e61f7464a615c59757fc8dc35c896efd764065da
+SHA1: 92905b657ffb69193dd1370a7137eef64e934005
+MD5sum: 52086c719518436c3d7da8576a5574c2
+Description: Helps you win at grep.
+
+Package: nvim-hexedit
+Version: 1590206640-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 1256
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/rootkiter/vim-hexedit
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-hexedit/nvim-hexedit_1590206640-1_all.deb
+Size: 1066444
+SHA256: 79919a8efd6f985358ebf2709e01ff44fc6cef5d2b8270754a4ec97b0b58d6e4
+SHA1: f456a176cfe9e37d701f04e7e23643c2d52bfdbb
+MD5sum: 5342687c08d7161fba95be69408f2ccd
+Description: hex editor
+
+Package: nvim-javascript
+Version: 1621796061-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 92
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/pangloss/vim-javascript
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-javascript/nvim-javascript_1621796061-1_all.deb
+Size: 17092
+SHA256: 84c8dc3c2dbf6b00c4d96ad89862407c9eea8dc415ea0105084543c111995adb
+SHA1: c477416f26e478cc3e9cc06d8c35e0627ef39996
+MD5sum: 0008321e2d1ab8476d960bd52a387abc
+Description: Vastly improved Javascript indentation and syntax support in Vim.
+
+Package: nvim-jq
+Version: 1558426495-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 54
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/vito-c/jq.vim
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-jq/nvim-jq_1558426495-1_all.deb
+Size: 11556
+SHA256: 506e2208cfd41b9ee74910e2554b12c66f731e66db1f9049e9d18a91b20b2f66
+SHA1: 675aff1229dcf316ee368f0ce4238bc435b9a657
+MD5sum: 2ab02d037e8b8e8213bec31e0a3645cc
+Description: Syntax highlighting for jq files in vim/neovim
+
+Package: nvim-ledger
+Version: 1590386438-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 111
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/ledger/vim-ledger
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-ledger/nvim-ledger_1590386438-1_all.deb
+Size: 25260
+SHA256: 85572e153e731d193bd76d8777fc21f54103fbff196eff8876672a27509e82c7
+SHA1: 401b8dc0402fd5ed976120e9d81a15d22b2555ef
+MD5sum: e0e312a1118117e0a01879f3e29f05c4
+Description: Vim plugin for Ledger
+
+Package: nvim-localvimrc
+Version: 1426754602-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 24
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/MarcWeber/vim-addon-local-vimrc
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-localvimrc/nvim-localvimrc_1426754602-1_all.deb
+Size: 4820
+SHA256: 9f9e4bcacd173997a5561fc1386afde3cac313d3978af8df781014be6bd2b9eb
+SHA1: 0776640a83975c70dcabeab6191865056df6aa90
+MD5sum: e0030309a3fc243a2844c10c96e9993f
+Description: kiss local vimrc with hash protection
+
+Package: nvim-openscad
+Version: 1594187578-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 27
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/sirtaj/vim-openscad
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-openscad/nvim-openscad_1594187578-1_all.deb
+Size: 4288
+SHA256: 09b5d15c80ccdd0f00af0fc5db8d530195ef51be4d4f9d1a6fb9d137ba1ad410
+SHA1: 1a5efd4d42224f6db06c6676b76a2eb511d7a13c
+MD5sum: 0fcd819ef5e62c0888ed0d3947bbb077
+Description: Syntax highlighting for openscad files
+
+Package: nvim-pythonindent
+Version: 1584717595-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 86
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/Vimjas/vim-python-pep8-indent
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-pythonindent/nvim-pythonindent_1584717595-1_all.deb
+Size: 17544
+SHA256: c44eb1149f2e17bb0ff2a09da63955b5775b27c4bec1991b545e5b641107c50d
+SHA1: 46c2f10773042d4e3e857cf588247e0f715f222f
+MD5sum: 863b93995a93e0cf6a3b962d6ef4913b
+Description: A nicer Python indentation style for vim.
+
+Package: nvim-ranger
+Version: 1572447444-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 310
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/francoiscabrol/ranger.vim
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-ranger/nvim-ranger_1572447444-1_all.deb
+Size: 284012
+SHA256: d425f11b0c16f4f92c24b959f1da01596b93d8fd4835a61eb05eb103b8d0d42a
+SHA1: 6ff3c3dbe953933c42dd5ac90adff4630a3eea95
+MD5sum: 580cb6297cc0be3a1f3fa751c0f725e0
+Description: Ranger integration in vim and neovim
+
+Package: nvim-repeat
+Version: 1572127740-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 26
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/tpope/vim-repeat.git
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-repeat/nvim-repeat_1572127740-1_all.deb
+Size: 4856
+SHA256: e50ad8c800494b37489c0f4a61ecde2d2c1dcebee564eebc93cbc33ec7408468
+SHA1: 27ea6d9090fe6e444788599b03888447621d2682
+MD5sum: 564ef74ad2d672dbe168bdc0dbbaffce
+Description: repeat.vim: enable repeating supported plugin maps with "."
+
+Package: nvim-rust
+Version: 1613421258-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 181
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/rust-lang/rust.vim
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-rust/nvim-rust_1613421258-1_all.deb
+Size: 37728
+SHA256: 415d201fddb4a1feadc44a83c82517fe57553b0eb472df40c6cf958b51231dd5
+SHA1: 220739f5caee238408bfa36753ef55398644afe1
+MD5sum: d92afaa262f6983c5e5e4d32f92d70b9
+Description: Vim configuration for Rust.
+
+Package: nvim-surround
+Version: 1574922560-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 49
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/tpope/vim-surround.git
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-surround/nvim-surround_1574922560-1_all.deb
+Size: 11560
+SHA256: 4781026ddcae3e45033c0e5ee18b11c504dab01a4d1bb687b04c224595db2a06
+SHA1: c64034e83bce4c2e8edad70442a02535f9e71fc4
+MD5sum: 9969fa44d07a1954e6c0938fc26c4ab2
+Description: surround.vim: quoting/parenthesizing made simple
+
+Package: nvim-typescript
+Version: 1622262036-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 762
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/herringtondarkholme/yats.vim
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-typescript/nvim-typescript_1622262036-1_all.deb
+Size: 171228
+SHA256: 8c17b3adb0614f488555790b2fd507b963eccd985e3ff8737b2bf99e1a7306b9
+SHA1: 60b91c2fdc3004ba48e262a89671732529549cd1
+MD5sum: ba77e86950265ab3cce50936ed37d9f7
+Description: Yet Another TypeScript Syntax: The most advanced TypeScript Syntax
+ Highlighting in Vim.
+
+Package: nvim-undotree
+Version: 1552462679-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 94
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/mbbill/undotree
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-undotree/nvim-undotree_1552462679-1_all.deb
+Size: 17216
+SHA256: 9d193151ceeb00912a0142a01d4d554c77a64caaae4f0bbcf1c5041604b7372c
+SHA1: 902707fd86a4f55389ef8402189d4807209feded
+MD5sum: e6754f0fd36af3187ae23be281e4d32f
+Description: The undo history visualizer for VIM
+
+Package: nvim-zoomwintab
+Version: 1586533812-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 26
+Depends: neovim (>= 0.1.7)
+Recommends: python-neovim, python3-neovim
+Homepage: https://github.com/troydm/zoomwintab.vim
+Priority: extra
+Section: utils
+Filename: pool/main/n/nvim-zoomwintab/nvim-zoomwintab_1586533812-1_all.deb
+Size: 3564
+SHA256: 99a4cd7babcf60ae24be131fe13974246fc6ea2d2133fb52b80a9f65e344ae48
+SHA1: 9742644d5d9fbdfeb34456ac69c36cd17af3d3a3
+MD5sum: 679977d536ed4c52fc5e72a46f226099
+Description: zoomwintab vim plugin
+
+Package: python3-ush
+Source: ush
+Version: 4.1.0-1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 43
+Depends: python3:any
+Homepage: https://github.com/tarruda/python-ush.git
+Priority: extra
+Section: utils
+Filename: pool/main/u/ush/python3-ush_4.1.0-1_all.deb
+Size: 8932
+SHA256: 426233d473583a8c44b15963b66bddd8d9e80ffce05aa54adb137271206eff07
+SHA1: 214178e538f3ee32b558d68e1a330fa77e37a25a
+MD5sum: dce6e79d13bdff8a928b2c868d19e803
+Description: Powerful API for invoking with external commands
+
+Package: rogue-base
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 8
+Depends: autossh, bash-completion, beets, borgbackup, command-not-found, console-setup, curl, debootstrap, gdebi, gnupg, htop, ping, iproute2, less, libnotify-bin, locales, mpc, mpd, net-tools, network-manager, openssh-client, p7zip-full, ranger, silversearcher-ag, socat, sudo, systemd-container, taskwarrior, tmux, ufw, unzip, usbutils, vit, wget, zip
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-base_3_all.deb
+Size: 1612
+SHA256: 4d64fdf455399f2609e763a29c184edd58d060f8d516dd3a6e6bfb537bf3c5ca
+SHA1: 6f0620e75782cf19de5312b18449c249cdc2e0aa
+MD5sum: 8ad2695aa3aee92635fccc16184dcfd4
+Description: rogue-base meta package.
+ Basic software I use in a Debian system.
+
+Package: rogue-config-base
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 32
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-config-base_3_all.deb
+Size: 5560
+SHA256: 674f045e05495c6bd9a4fb54376c5c788a4d9595f3cf4074ef3d508c6464ff61
+SHA1: c874ba5bd0c375e2f032006510af9d848190fcf4
+MD5sum: 3f1912b57c6905d68cfe226b14f56530
+Description: Base configuration package
+
+Package: rogue-config-desktop
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 532
+Depends: dconf-cli, rogue-config-base
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-config-desktop_3_all.deb
+Size: 418692
+SHA256: d6c16f13e1d78dc2136f35371f483a908e090fc371ead14097d5cbecfc8c2de9
+SHA1: 19e7b1327f3b70c8c80548965dcda946f4fdc2c9
+MD5sum: 98b0cc35aed7fb93e130a0409e52d612
+Description: Desktop configuration package.
+
+Package: rogue-config-desktop-baremetal
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 56
+Depends: keyboard-configuration, rogue-config-desktop
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-config-desktop-baremetal_3_all.deb
+Size: 6928
+SHA256: 43f32a65b1aec09d1ad69929cf5df8f17a4fa5cede7c8177d8e1dc841b8463cc
+SHA1: fa72e4f4b854eb0f88f5f54757e3ccdea5f87cca
+MD5sum: 4ec9156bd03f63cfc0f64d49a2fb3542
+Description: Bare metal desktop configuration package.
+
+Package: rogue-config-desktop-r3950x
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 19
+Depends: rogue-config-desktop-baremetal
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-config-desktop-r3950x_3_all.deb
+Size: 2192
+SHA256: 9943f3f969b1f880eaacc760571f49234e1fc2d1dfb6f92b91157725f1260739
+SHA1: 5c96b89c643f3e34319b8397dab6dbdd89f084b5
+MD5sum: 77d6cec8ac4a8f198120ff79603e1825
+Description: Configuration for my ryzen 3950x PC.
+
+Package: rogue-config-syncthing
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 35
+Depends: syncthing, firejail
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-config-syncthing_3_all.deb
+Size: 3888
+SHA256: 59a56695fa39bd6c6cdb61b30cae73425458d5d076f7768e0efb4cbe9f2089e5
+SHA1: f311c798c208a9a4cb781cc9de96cd84e7a82d87
+MD5sum: b0030a5d0fe6b47838dd1eed154fda8c
+Description: More secure configuration for syncthing gui
+
+Package: rogue-config-vswitch0
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 32
+Depends: dnsmasq, ufw
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-config-vswitch0_3_all.deb
+Size: 3352
+SHA256: 3aa74aa290a2f21b68059ff9b19cfec5034047361f22e8773fd3171064b0f5ce
+SHA1: 10c826ac9efaf0bfd071dee1d21119e416ddf958
+MD5sum: 75c5786b61d380dc0cbf61bb569c3aa9
+Description: Configures virtual bridge with DNS and DHCP.
+
+Package: rogue-desktop
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 8
+Depends: autocutsel, dconf-editor, deluge, firefox-esr, fonts-cantarell, fonts-dejavu, fonts-firacode, fonts-inconsolata, fonts-ipafont, fonts-liberation, fonts-linuxlibertine, fonts-nanum-extra, fonts-powerline, fonts-symbola, fonts-vlgothic, fonts-font-awesome, imagemagick, i3, i3hub, keepassxc, lightdm, mate-desktop-environment, mpv, network-manager-gnome, pasystray, pavucontrol, pinentry-gtk2, python3-psutil, rogue-stterm, rofi, seahorse, slick-greeter, smplayer, sync-backup-utils, ttf-ubuntu-font-family, xcwd, xorg, xsel, zbar-tools, rogue-devel
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-desktop_3_all.deb
+Size: 1700
+SHA256: ae1cc006e0ec78c191c5d59deb5862a6d09a884689f14d850bf8e91f7913427d
+SHA1: 692e51b957be60a42ed6e9db519c95190b7821f5
+MD5sum: e9bd9d56102a95e579d3eb25b29477b8
+Description: rogue-desktop meta package.
+ My preferred X window manager + applications.
+
+Package: rogue-desktop-baremetal
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 8
+Depends: blueman, firmware-linux-nonfree, firmware-iwlwifi, libvirt-daemon-system, pulseaudio, pulseaudio-module-bluetooth, pulseaudio-module-jack, pulseaudio-module-lirc, pulseaudio-module-raop, pulseaudio-module-zeroconf, pulseaudio-utils, qemu-kvm, virt-manager, xserver-xephyr, rogue-desktop
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-desktop-baremetal_3_all.deb
+Size: 1548
+SHA256: d5115c68e72c60baf54b67ecddafe019a5dded815e6b70577708cd6a02b747ee
+SHA1: 0b10ca5ab2b967d774a2c634d5dbd283fcc88710
+MD5sum: d0ba39110e9b0ac10b41a72ebdcae8f2
+Description: rogue-desktop-baremetal meta package.
+ Only stuff I install on bare metal and not on containers.
+
+Package: rogue-desktop-r3950x
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 8
+Depends: firmware-amd-graphics, rogue-desktop-baremetal
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-desktop-r3950x_3_all.deb
+Size: 1436
+SHA256: 83414a29989ebd081d56b8255697a7587cdf4881eb86298d1a3eade4c3ea34a4
+SHA1: c72adc80cb128afa170633a07c9e1bae64c4851f
+MD5sum: f36c4f9860542642924dc88b97ac2969
+Description: rogue-desktop-r3950x meta package.
+ Packages specific to for my ryzen 3950x desktop computer.
+
+Package: rogue-devel
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 8
+Depends: autoconf, automake, build-essential, bzr, cmake, git, libtool-bin, python3-setuptools, python3-wheel, python3-stdeb, rogue-base
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-devel_3_all.deb
+Size: 1460
+SHA256: cba5327f4eb6e1b37e479df06c3f2f239b4c0099a07fc38e711804ed84f4293c
+SHA1: 4d8e40615e8271ee3b202fffe8e9409077a24ad4
+MD5sum: 8e2b47de7f40b743ba8aeecd23e4fab1
+Description: rogue-devel meta package.
+ Tools for software development.
+
+Package: rogue-nvim
+Source: rogue
+Version: 3
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 9
+Depends: neovim, python3-neovim, python3-pyls, language-server-typescript, nvim-commentary, nvim-deoplete, nvim-eunuch, nvim-fugitive, nvim-fzf, nvim-glsl, nvim-gnupg, nvim-grepper, nvim-hexedit, nvim-javascript, nvim-jq, nvim-languageclient, nvim-ledger, nvim-localvimrc, nvim-openscad, nvim-pythonindent, nvim-ranger, nvim-repeat, nvim-rust, nvim-surround, nvim-typescript, nvim-undotree, nvim-zoomwintab
+Priority: extra
+Section: misc
+Filename: pool/main/r/rogue/rogue-nvim_3_all.deb
+Size: 1656
+SHA256: 35cfe261deb280de1d570915d10183b812ab545b219f09a54df9d018b7f0dd98
+SHA1: 2476eabc7818361926d0ae0df2284cb1a90232ca
+MD5sum: 31a2c2f029a59b0eee8c59f534f0a29c
+Description: rogue-nvim meta package.
+ Depends on neovim + plugins I use.
+
+Package: sync-backup-utils
+Version: 2
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 54
+Depends: borgbackup, gnome-gocryptfs, keyutils, python3, python3-pexpect, python3-ush, python3-xdg, rclone, rsync, systemd-gtk-ask-password-agent, zstd
+Priority: extra
+Section: utils
+Filename: pool/main/s/sync-backup-utils/sync-backup-utils_2_all.deb
+Size: 10832
+SHA256: 2b2b78dd0bb4ce116acdde4fc2698e029c522cfed7a325ca29d7d45e952230c8
+SHA1: 95f85230c6aafd09c01dd3975281ca7b766aa107
+MD5sum: fb445e5f9821bf03b4783c0173305e0e
+Description: Some tools to faciliate backup/sync of files across machines.
+ syborg is a backup tool that allows integrating backups from multiple machines
+ into one shared borg repository . Its intended purpose is creating system tar
+ backups that are placed in a directory synchronized with a backup server,
+ which will periodically import the tarballs into borg . cborg simplifies the
+ task of mirroring borg repositories to cloud storage with rclone.
+
+Package: systemd-gtk-ask-password-agent
+Version: 1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 21
+Depends: python3-gi, libgtk-3-0
+Priority: extra
+Section: utils
+Filename: pool/main/s/systemd-gtk-ask-password-agent/systemd-gtk-ask-password-agent_1_all.deb
+Size: 3788
+SHA256: 0f6dc9de23e16ec3a28dd4ef796410eec43c1ce63d490f64c44c05757d9420ec
+SHA1: 3fe345a2e81c6a5c60fb619e7cee094ee0e21e19
+MD5sum: 9fb121b89d02cede80670e1b0c8a5a1e
+Description: systemd-ask-password agent in gtk.
+ Based on systemd-gnome-ask-password-agent.
+
+Package: xserver-common
+Source: xorg-server
+Version: 2:1.20.11-1.1
+Architecture: all
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 2347
+Depends: x11-common, xkb-data, x11-xkb-utils
+Recommends: xfonts-base, xauth
+Replaces: xserver-xorg-core (<< 2:1.5.2)
+Multi-Arch: foreign
+Homepage: https://www.x.org/
+Priority: optional
+Section: x11
+Filename: pool/main/x/xorg-server/xserver-common_1.20.11-1.1_all.deb
+Size: 2283244
+SHA256: 353df3460fc32d9c275586b40100166cf3cd70689758cc226b4e9ca5dbd1d9e3
+SHA1: 09263d5bf25dc8de0642ba1d6f81074eb9ad9b33
+MD5sum: 38bfd768e83ebafd1ac8ef84bef69a6c
+Description: common files used by various X servers
+ This package provides files necessary for all X.Org based X servers.
+
