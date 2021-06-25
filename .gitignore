@@ -3,5 +3,5 @@ debian/conf/
 debian/db/
 ubuntu/conf/
 ubuntu/db/
-debmaster-metadata.json
+debmaster-repo.json
 debmaster-packages.json
