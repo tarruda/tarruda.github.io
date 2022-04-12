@@ -1,0 +1,55 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: Debuilder
+Label: Debuilder
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: amd64 arm64 i386 armhf
+Components: main
+Description: Apt repository created by debuilder
+Date: Tue, 01 Nov 2022 00:20:30 +0000
+MD5Sum:
+ a653db61f818bd190bde5b1a44058677 11173 main/binary-amd64/Packages
+ ea7ef84ffd936c079376d347d9d6810d 4244 main/binary-amd64/Packages.gz
+ 1d14b40e76e8e74119b8a67eb11a8878 5446 main/binary-arm64/Packages
+ 9b427ff0f397a49b13049cb2fe88d687 2024 main/binary-arm64/Packages.gz
+ 1d14b40e76e8e74119b8a67eb11a8878 5446 main/binary-i386/Packages
+ 9b427ff0f397a49b13049cb2fe88d687 2024 main/binary-i386/Packages.gz
+ 1d14b40e76e8e74119b8a67eb11a8878 5446 main/binary-armhf/Packages
+ 9b427ff0f397a49b13049cb2fe88d687 2024 main/binary-armhf/Packages.gz
+SHA1:
+ 7898251bb7c3f25f9b36913649ef1e6bc42791be 11173 main/binary-amd64/Packages
+ 4fe3473528377a40fa6815fdda7de7dcb875cbdb 4244 main/binary-amd64/Packages.gz
+ 890e6b28fd7056af626cc27699a6da87cac55cfa 5446 main/binary-arm64/Packages
+ bdf5acac04723a6c7aee00b846a22b1e763403aa 2024 main/binary-arm64/Packages.gz
+ 890e6b28fd7056af626cc27699a6da87cac55cfa 5446 main/binary-i386/Packages
+ bdf5acac04723a6c7aee00b846a22b1e763403aa 2024 main/binary-i386/Packages.gz
+ 890e6b28fd7056af626cc27699a6da87cac55cfa 5446 main/binary-armhf/Packages
+ bdf5acac04723a6c7aee00b846a22b1e763403aa 2024 main/binary-armhf/Packages.gz
+SHA256:
+ 9c7d89e64f397f6c7efeedf9e04f12b4de623d649ca6be2164d099c445548d32 11173 main/binary-amd64/Packages
+ bff7befe61b3f59d6d0317862236b47c7646f6f000aaf67ce1163c99f1ad6029 4244 main/binary-amd64/Packages.gz
+ 205e1625b274d7a54253e1714a052d84b8a374d999c0c0d8d564011e86fedab8 5446 main/binary-arm64/Packages
+ 12f31999dbf671dfbb8ed52e116adde9a3d2aa2b6aa6a33ca577dd8853c4d6c7 2024 main/binary-arm64/Packages.gz
+ 205e1625b274d7a54253e1714a052d84b8a374d999c0c0d8d564011e86fedab8 5446 main/binary-i386/Packages
+ 12f31999dbf671dfbb8ed52e116adde9a3d2aa2b6aa6a33ca577dd8853c4d6c7 2024 main/binary-i386/Packages.gz
+ 205e1625b274d7a54253e1714a052d84b8a374d999c0c0d8d564011e86fedab8 5446 main/binary-armhf/Packages
+ 12f31999dbf671dfbb8ed52e116adde9a3d2aa2b6aa6a33ca577dd8853c4d6c7 2024 main/binary-armhf/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE7kHFH/2K+x6MRNkzMJx45e0bPV4FAmNgZlgACgkQMJx45e0b
+PV5RzxAAoo5abz/Liwimwl1Y4ivXBwUC8TCvjkyW4Owc1YeAN5bSYPG68dz3lq8B
+hSU+79XhWeinqCmHYwC6T/HgUM3W8XCHVMhymnJHXrD7nyFiv4keFvwuh4k/+cNd
+cOF+m+DK4oyFuDf+XgRsyE78TGcsailbGP9y4nsX05TlIHzFo7PzIsHPvyo47Ha1
+xnfnrmZQLfSyVuTkN6aKkMKAgKmXXPzJ68V42eXZMxIjNaG2lPXajiYcorBnQocL
+tK/sYdNf1pGAwY18FE4bntpea5NC87zAofAD/wUCg8e9C4b59cdtLTTC7sSrKsS/
+AY4euNko+KAyA1Hjmrfp4XFllpRwBpNXq2T76KX5LcboJkAeGDa4JK2DXZpiJBQd
+ylh/foDGY8KhjzOGVXWG3DzoU6Mn5yFfa7O6oaxXlFYMdzfHcPC8RZtftfjz8rXD
+WZQC0a+7CPgvqOrvV4pJCVCXSpjBwubu8yJI0gzdOz3/+keJbQFDSiCMfkXwkmg7
+tjyM0sZaAto79GZwWf811JIQ4y8XcGxlFbxpCsTx3Nop3KnLBP/+UCHO8QUMPO/Q
+raP2mw1Ovi1XULz15dOC/5tdOD6FMPu+BY8jG3cxpXOtSZL3DhB9aKXx9uRpvsUV
+Bv85g0/t2PHXmVNKpcCZ9GPvZy29SF3GZBKfHFo+D/UB/3SAwlY=
+=FLPe
+-----END PGP SIGNATURE-----

@@ -1,0 +1,36 @@
+Origin: Debuilder
+Label: Debuilder
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: amd64 arm64 i386 armhf
+Components: main
+Description: Apt repository created by debuilder
+Date: Tue, 01 Nov 2022 00:20:30 +0000
+MD5Sum:
+ a653db61f818bd190bde5b1a44058677 11173 main/binary-amd64/Packages
+ ea7ef84ffd936c079376d347d9d6810d 4244 main/binary-amd64/Packages.gz
+ 1d14b40e76e8e74119b8a67eb11a8878 5446 main/binary-arm64/Packages
+ 9b427ff0f397a49b13049cb2fe88d687 2024 main/binary-arm64/Packages.gz
+ 1d14b40e76e8e74119b8a67eb11a8878 5446 main/binary-i386/Packages
+ 9b427ff0f397a49b13049cb2fe88d687 2024 main/binary-i386/Packages.gz
+ 1d14b40e76e8e74119b8a67eb11a8878 5446 main/binary-armhf/Packages
+ 9b427ff0f397a49b13049cb2fe88d687 2024 main/binary-armhf/Packages.gz
+SHA1:
+ 7898251bb7c3f25f9b36913649ef1e6bc42791be 11173 main/binary-amd64/Packages
+ 4fe3473528377a40fa6815fdda7de7dcb875cbdb 4244 main/binary-amd64/Packages.gz
+ 890e6b28fd7056af626cc27699a6da87cac55cfa 5446 main/binary-arm64/Packages
+ bdf5acac04723a6c7aee00b846a22b1e763403aa 2024 main/binary-arm64/Packages.gz
+ 890e6b28fd7056af626cc27699a6da87cac55cfa 5446 main/binary-i386/Packages
+ bdf5acac04723a6c7aee00b846a22b1e763403aa 2024 main/binary-i386/Packages.gz
+ 890e6b28fd7056af626cc27699a6da87cac55cfa 5446 main/binary-armhf/Packages
+ bdf5acac04723a6c7aee00b846a22b1e763403aa 2024 main/binary-armhf/Packages.gz
+SHA256:
+ 9c7d89e64f397f6c7efeedf9e04f12b4de623d649ca6be2164d099c445548d32 11173 main/binary-amd64/Packages
+ bff7befe61b3f59d6d0317862236b47c7646f6f000aaf67ce1163c99f1ad6029 4244 main/binary-amd64/Packages.gz
+ 205e1625b274d7a54253e1714a052d84b8a374d999c0c0d8d564011e86fedab8 5446 main/binary-arm64/Packages
+ 12f31999dbf671dfbb8ed52e116adde9a3d2aa2b6aa6a33ca577dd8853c4d6c7 2024 main/binary-arm64/Packages.gz
+ 205e1625b274d7a54253e1714a052d84b8a374d999c0c0d8d564011e86fedab8 5446 main/binary-i386/Packages
+ 12f31999dbf671dfbb8ed52e116adde9a3d2aa2b6aa6a33ca577dd8853c4d6c7 2024 main/binary-i386/Packages.gz
+ 205e1625b274d7a54253e1714a052d84b8a374d999c0c0d8d564011e86fedab8 5446 main/binary-armhf/Packages
+ 12f31999dbf671dfbb8ed52e116adde9a3d2aa2b6aa6a33ca577dd8853c4d6c7 2024 main/binary-armhf/Packages.gz

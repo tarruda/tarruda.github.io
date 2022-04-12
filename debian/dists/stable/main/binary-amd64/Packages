@@ -1,0 +1,316 @@
+Package: lxd
+Version: 5.4
+Architecture: amd64
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 119094
+Depends: acl, attr, adduser, dnsmasq-base, ebtables, iptables, lsb-base, lxcfs, passwd, rsync, squashfs-tools, uidmap, xdelta3, xz-utils, qemu-system, qemu-user, virt-viewer, libacl1 (>= 2.2.23), libc6 (>= 2.28), libcap2 (>= 1:2.10), libgcc-s1 (>= 3.3.1), liblxc1 (>= 1:4.0.2), liblz4-1 (>= 0.0~r127), libsqlite3-0 (>= 3.12.0), libudev1 (>= 199), libuv1 (>= 1.4.2)
+Breaks: lxc1
+Replaces: lxc1
+Filename: pool/main/lxd-5.4/lxd_5.4_amd64.deb
+Size: 34667676
+MD5sum: 144860c5b77e0f39ff9bb3bb5f31abf7
+SHA1: 1362ad57fe5ed9d6edd7c46def47b27619cc4efc
+SHA256: eb510b9b44f20f285970036499d7f06e2e02bfbd455eb107d9c5a4ae48425924
+Section: admin
+Priority: optional
+Homepage: https://linuxcontainers.org/lxd/introduction/
+Description: This package contains the LXD daemon plus all tools
+
+Package: lxd-dbgsym
+Source: lxd
+Version: 5.4
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 37836
+Depends: lxd (= 5.4)
+Filename: pool/main/lxd-5.4/lxd-dbgsym_5.4_amd64.deb
+Size: 29843732
+MD5sum: 5814df90d5ed34258eb0f3c3030e0b0f
+SHA1: be94dfa3426e31ab6f301dee8d10122c1b843b7a
+SHA256: 26476a2480b1e083db31f440a17efe6b217d29be7e862dbb87b9255e35c2b24c
+Section: debug
+Priority: optional
+Description: debug symbols for lxd
+Build-Ids: 14ceb74822c6a6fea490b52c8006c0b885eaa3ae 34fcdcafe11f032bfbae45d69dfcef24fa21a4e4 3e720faa5b00cc6f84cb8fdb39b9f42e7305853e aa916f447247e3846dd5c9cd329c4af1aab974e7 caa4ae2bf40a001baf899c234e259e71dc505b09 dac36bd240df5eb5da6df9ced38058438faa0b27
+
+Package: nodepkgs
+Version: 1
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 230
+Depends: nodejs
+Filename: pool/main/nodepkgs-1/nodepkgs_1_all.deb
+Size: 56152
+MD5sum: ac5be43d2051395455df4d8726f78e93
+SHA1: e835862f91335ba359dc7a015300b129e03fa881
+SHA256: 40395b5ee47ad0233bd410671ad05eb06a8702785151eb3891bf05b0bfd2e974
+Section: utils
+Priority: extra
+Description: Multiple node.js packages
+
+Package: nvim
+Version: 0.4.4
+Architecture: amd64
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 22771
+Conflicts: neovim
+Filename: pool/main/nvim-0.4.4/nvim_0.4.4_amd64.deb
+Size: 5339648
+MD5sum: 7da5642a3c0be19edb075730dfa7b2ec
+SHA1: 7a545679b7894b0b47fc031521eefdf83f303445
+SHA256: 8c8beb795199af0eb7696ba5c8e8c8f71599821e6fb4e404a0a870b9a6f09f8c
+Section: misc
+Priority: optional
+Homepage: https://github.com/neovim/neovim
+Description: My neovim build
+
+Package: nvim-dbgsym
+Source: nvim
+Version: 0.4.4
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 1821
+Depends: nvim (= 0.4.4)
+Filename: pool/main/nvim-0.4.4/nvim-dbgsym_0.4.4_amd64.deb
+Size: 1488180
+MD5sum: 671864e1637a30bf31af4049c908601e
+SHA1: 7bd406e2f27aab6bb45853d5ae2e3145d2d5f498
+SHA256: 410a752fb727a980294ae225e2bde0bad17f581e1c172353631b188701aa07b7
+Section: debug
+Priority: optional
+Description: debug symbols for nvim
+Build-Ids: 6bed0da56ed8bdb6eb8e44002260683ef4547bb8
+
+Package: nvim-plugins
+Version: 1
+Architecture: amd64
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 14967
+Depends: nvim, python3-pyls, python3-neovim, nvim-remote, nodepkgs, xsel
+Filename: pool/main/nvim-plugins-1/nvim-plugins_1_amd64.deb
+Size: 5505276
+MD5sum: 154e1efe4d954b1370c256f60689e794
+SHA1: 409844e682cad658eef505e40f7fb547ac1e9a4a
+SHA256: 7d226846589a56fd4dc7d2903238a2aeacba5c56dacbd67f37c45538dd685731
+Section: misc
+Priority: optional
+Homepage: https://github.com/neovim/neovim
+Description: My neovim plugins
+
+Package: nvim-plugins-dbgsym
+Source: nvim-plugins
+Version: 1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 4090
+Depends: nvim-plugins (= 1)
+Filename: pool/main/nvim-plugins-1/nvim-plugins-dbgsym_1_amd64.deb
+Size: 2502524
+MD5sum: 329e60edaee688da85c082ee45ddfe6e
+SHA1: 06b17eddb2c875e7da452cfb0cfb82626e88f0ba
+SHA256: 3331c0902ece26b3792a878e11d5f189cae49446c6f6146f2cd2e809300f8341
+Section: debug
+Priority: optional
+Description: debug symbols for nvim-plugins
+Build-Ids: fe3e2a4a318e2889b4487687dbabf6c5a3236a72
+
+Package: nvim-remote
+Version: 1.7.0
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 55
+Depends: python3-pkg-resources, python3-psutil, python3-pynvim, python3:any, python3-neovim
+Filename: pool/main/nvim-remote-1.7.0/nvim-remote_1.7.0_all.deb
+Size: 11412
+MD5sum: 018d8e8dd9a313def9c65b0292732502
+SHA1: 4c27a8bad5288c16b2c959cb94b3d033130dd31d
+SHA256: a00a613e7f97e1e7cd6aa56b163705a1df7c7720ee2e99030ef0643533b30d23
+Section: utils
+Priority: extra
+Homepage: https://github.com/mhinz/neovim-remote
+Description: Interact with running nvim instances from command-line
+
+Package: python3-ush
+Source: ush
+Version: 4.1.0
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 42
+Depends: python3:any
+Filename: pool/main/ush-4.1.0/python3-ush_4.1.0_all.deb
+Size: 8560
+MD5sum: c3ef1d5b8ed5271822e7b01d623c54cc
+SHA1: 2a7f83df5e8f75628d18fec5f4db3df8ac3116df
+SHA256: 6cf7a2fe8f93da5da7ea46be42931d3c508416f9b0e34c9485092926b1c18757
+Section: utils
+Priority: extra
+Homepage: https://github.com/tarruda/python-ush.git
+Description: Powerful API for invoking with external commands
+
+Package: rogue-base
+Source: rogue
+Version: 4
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 32
+Depends: autossh, borgbackup, curl, htop, netcat-openbsd, p7zip-full, silversearcher-ag, socat, syborg, syncthing, tmux, ufw, unzip, wget, zip
+Filename: pool/main/rogue-4/rogue-base_4_all.deb
+Size: 6032
+MD5sum: 8ef2e919ce72e340020be2dfb22b494c
+SHA1: bb1ecd66702a793ad883f279c13bab67890b2e95
+SHA256: 1ef667ba712d0b7c13a7f6f02669f8d86949fbdb4fe78ec1029eaa1c7e3744ce
+Section: misc
+Priority: extra
+Description: rogue-base meta package.
+ Basic software I use in a Debian system.
+
+Package: rogue-config-syncthing
+Source: rogue
+Version: 4
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 35
+Depends: syncthing, firejail, falkon
+Filename: pool/main/rogue-4/rogue-config-syncthing_4_all.deb
+Size: 3884
+MD5sum: ace6cdd2ffcbc955769f4fd6ce3cd611
+SHA1: c97a029060ff449de76724de2bef867aff8ad114
+SHA256: 407529307b036577ed9f05ac2342069dc63169d781b14a7c5d42dc6f509f5656
+Section: misc
+Priority: extra
+Description: More secure configuration for syncthing gui
+
+Package: rogue-config-vswitch0
+Source: rogue
+Version: 4
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 34
+Depends: dnsmasq, ufw
+Filename: pool/main/rogue-4/rogue-config-vswitch0_4_all.deb
+Size: 3896
+MD5sum: 8b02a5e64f9c3be3b975fd8e20b1dc50
+SHA1: 0bdcac89dbc99493dbb7321801ed72028ae96e7c
+SHA256: e15247f2cfd2bafe7510e2906453b3788888df8389596e00dcf2de514fae4fae
+Section: misc
+Priority: extra
+Description: Configures virtual bridge with DNS and DHCP.
+
+Package: rogue-desktop-baremetal
+Source: rogue
+Version: 4
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 43
+Depends: keepassxc, rogue-base
+Filename: pool/main/rogue-4/rogue-desktop-baremetal_4_all.deb
+Size: 6004
+MD5sum: f60e524142e16cbfe7fd08b0d704485b
+SHA1: fefbab901f9f63c6ffeb535eb7f23a4d49a97c6d
+SHA256: c4cde5217c609e5aa0a65c3817a0135f69cb267d770214ad530a8f5ca9ca1097
+Section: misc
+Priority: extra
+Description: rogue-desktop-baremetal meta package.
+ Only stuff I install on bare metal and not on containers/vms.
+
+Package: rogue-desktop-baremetal-all
+Source: rogue
+Version: 4
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 8
+Depends: rogue-desktop-baremetal, rogue-config-syncthing, rogue-stterm
+Filename: pool/main/rogue-4/rogue-desktop-baremetal-all_4_all.deb
+Size: 1440
+MD5sum: e8fce257baf0b42512865246279b9be3
+SHA1: 68d3304dd3fc03cbbf3762e06e97af739179505d
+SHA256: 0906062fadc7576cfe6141c42aa5de6fd1e1f6e3ea488112da5f059660418c8b
+Section: misc
+Priority: extra
+Description: rogue-desktop-baremetal meta package.
+ Only stuff I install on bare metal and not on containers/vms.
+
+Package: rogue-desktop-r3950x
+Source: rogue
+Version: 4
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 15
+Depends: firmware-amd-graphics, rogue-desktop-baremetal
+Filename: pool/main/rogue-4/rogue-desktop-r3950x_4_all.deb
+Size: 2080
+MD5sum: a7dfbf97c3f0e1fcef529f44e9286067
+SHA1: 07f30fba0bf0ba3a817a89370c156d06617841aa
+SHA256: 48b01f4911e9fe3d3bd093047b072a3e820ca9ecc7017822c8a1d5d766de044e
+Section: misc
+Priority: extra
+Description: rogue-desktop-r3950x meta package.
+ Packages specific to for my ryzen 3950x desktop computer.
+
+Package: rogue-stterm
+Version: 0.8.5
+Architecture: amd64
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 121
+Depends: libc6 (>= 2.17), libfontconfig1 (>= 2.12.6), libharfbuzz0b (>= 0.9.32), libx11-6, libxft2 (>> 2.1.1), ncurses-term (>= 6.1+20180714-1), fonts-firacode, fonts-powerline, fonts-font-awesome
+Recommends: fonts-emojione
+Conflicts: stterm
+Filename: pool/main/rogue-stterm-0.8.5/rogue-stterm_0.8.5_amd64.deb
+Size: 42088
+MD5sum: bcb3079a48e54deb9b39ccab5bcc162b
+SHA1: ed77d6e407d9eb4720459661de7467e2bfe7858c
+SHA256: 0149dc646370d29065c2e21dac4e2ada3ca502b4dcee5ab3ffb94d24059f4103
+Section: x11
+Priority: optional
+Homepage: https://st.suckless.org/
+Description: st is a terminal emulator from the suckless project with a focus on
+ simplicity, clarity and frugality. The project's philosophy is about
+ keeping things simple, minimal and usable.
+ .
+ st supports most VT10X escape sequences, serial lines, XIM, utmp via
+ utmp(1), clipboard handling, mouse and keyboard shortcuts, UTF-8, wide
+ characters, resize, 256 colors, true colors, antialiased fonts (using
+ fontconfig), fallback fonts, and line drawing. It does *not* provide
+ a scrollback buffer: users are encouraged to use a terminal multiplexter.
+ .
+ This Debian package is called 'stterm' for historical reasons.
+ .
+ My preferred patches/settings on top of upstream st.
+
+Package: rogue-stterm-dbgsym
+Source: rogue-stterm
+Version: 0.8.5
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 113
+Depends: rogue-stterm (= 0.8.5)
+Filename: pool/main/rogue-stterm-0.8.5/rogue-stterm-dbgsym_0.8.5_amd64.deb
+Size: 93364
+MD5sum: 2b98b8f541f81f3592f026d17c357deb
+SHA1: c2052bed6bc9770ff9831059d366819d6f94fa56
+SHA256: 408b5f9107040f55b053a0ac8f650b8ee78b1e0458a04ba3e1aac06523a591e9
+Section: debug
+Priority: optional
+Description: debug symbols for rogue-stterm
+Build-Ids: 88cd2c289182ac18bee014cdc5eaac582c1d7d92
+
+Package: syborg
+Version: 1.0.0
+Architecture: all
+Maintainer: Thiago Padilha <thiago@padilha.cc>
+Installed-Size: 63
+Depends: python3-pexpect, python3-xdg, python3:any, libgtk-3-0, python3-ush, python3-gi, rclone, keyutils, borgbackup, gir1.2-notify-0.7
+Filename: pool/main/syborg-1.0.0/syborg_1.0.0_all.deb
+Size: 11764
+MD5sum: 2c1e2ca62e6b3c7277f08e142dd8e176
+SHA1: 2a6293490b35033b2511df430c154577defd82f9
+SHA256: de9facc36fbf5731dd296a036e4c385d9b39d77f7f18b55b2d8d63cbc65e6b1a
+Section: utils
+Priority: extra
+Homepage: https://github.com/tarruda/syborg.git
+Description: Nice borgbackup wrapper
+
